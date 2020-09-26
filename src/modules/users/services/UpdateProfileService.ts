@@ -5,8 +5,6 @@ import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 import User from '../infra/typeorm/entities/User';
-import e from 'express';
-import passwordRouter from '../infra/http/routes/password.routes';
 
 interface Request {
   user_id: string;
@@ -17,7 +15,7 @@ interface Request {
 }
 
 @injectable()
-class UpdateProfile {
+class UpdateProfileService {
   constructor (
     @inject('UsersRepository')
     private usersRepository : IUsersRepository,
@@ -65,4 +63,4 @@ class UpdateProfile {
   }
 }
 
-export default UpdateProfile;
+export default UpdateProfileService;
