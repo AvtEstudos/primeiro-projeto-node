@@ -30,10 +30,6 @@ class ListProvidersService {
       });
 
       await this.cacheProvider.save(`providers-list:${user_id}`, users);
-
-      console.log('Query executada');
-    } else {
-      console.log('Query não executada');
     }
 
     return users;

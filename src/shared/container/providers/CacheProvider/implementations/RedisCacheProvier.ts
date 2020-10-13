@@ -1,7 +1,6 @@
 import Redis, { Redis as RedisClient } from 'ioredis';
 import cacheConfig from '@config/cache';
 import ICacheProvider from '../models/ICacheProvider';
-import { pipeline } from 'nodemailer/lib/xoauth2';
 
 export default class RedisCacheProvier implements ICacheProvider {
   private client: RedisClient;
